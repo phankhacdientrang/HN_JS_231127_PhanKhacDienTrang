@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './UpdateBook.css'; 
+import '../css/update.css'; 
 
 export default function UpdateBook() {
     const [bookId, setBookId] = useState('');
@@ -28,7 +28,7 @@ export default function UpdateBook() {
     };
 
     return (
-        <div className="container"> {/* Thêm className để áp dụng CSS */}
+        <div className="container">
             <h2>Update Book</h2>
             <div>
                 <label>Book ID:</label>

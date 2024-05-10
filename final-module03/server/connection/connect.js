@@ -8,5 +8,5 @@ const poot = mysql.createConnection({
     database: 'final'
 })
 
-const db = root.promise();
+const db = poot.promise();
 module.exports = db;

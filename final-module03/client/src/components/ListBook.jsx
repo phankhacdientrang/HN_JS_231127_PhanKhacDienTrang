@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './List.css'
+import '../css/list.css';
 
 export default function List() {
     const [books, setBooks] = useState([]);

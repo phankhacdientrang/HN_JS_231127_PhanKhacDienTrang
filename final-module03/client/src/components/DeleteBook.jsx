@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './deleteBook.css'
+import '../css/delete.css'
 
 export default function DeleteBook() {
     const [bookId, setBookId] = useState('');
@@ -17,6 +17,12 @@ export default function DeleteBook() {
         }
     };
 
+    const confirmDelete = () => {
+        if (window.confirm('Are you sure you want to delete this book?')) {
+            handleDelete();
+        }
+    };
+
     return (
         <div className="container">
             <h2>Delete Book</h2>
@@ -24,7 +30,7 @@ export default function DeleteBook() {
                 <label>Book ID:</label>
                 <input type="text" value={bookId} onChange={(e) => setBookId(e.target.value)} />
             </div>
-            <button onClick={handleDelete}>Delete Book</button>
+            <button onClick={confirmDelete}>Delete Book</button>
             {message && <p>{message}</p>}
         </div>
     );

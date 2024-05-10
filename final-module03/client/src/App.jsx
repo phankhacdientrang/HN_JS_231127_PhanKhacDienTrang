@@ -1,31 +1,30 @@
 import React from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
-import UpBook from '../src/components/UpBook'
-import List from '../src/components/List'
-import Delete from '../src/components/DeleteBook'
-import Addbook from '../src/components/AddNewBook'
-import './App.css'
+import UpdateBook from './components/UpdateBook'
+import ListBook from './components/ListBook'
+import DeleteBook from './components/DeleteBook'
+import AddBook from './components/AddBook'
+import './css/App.css'
+
 export default function App() {
   return (
    <>
    <div>
     <nav>
     <ul>
-      <li><Link to='/upbook'>Upbook</Link></li>
-      <li><Link to='/list'>List</Link></li>
-      <li><Link to='/delete'>Delete</Link></li>
-      <li><Link to='/addbook'>Add New Book</Link></li>
+      <li><Link to='/updatebook'>Update Book</Link></li>
+      <li><Link to='/listbook'>List Book</Link></li>
+      <li><Link to='/deletebook'>Delete Book</Link></li>
+      <li><Link to='/addbook'>Add Book</Link></li>
     </ul>
    </nav>
    <Routes>
-    <Route path='/upbook' element={<UpBook/>}/>
-    <Route path='/list' element={<List/>}/>
-    <Route path='/delete' element={<Delete/>}/>
-    <Route path='/addbook' element={<Addbook/>}/>
+    <Route path='/updatebook' element={<UpdateBook/>}/>
+    <Route path='/listbook' element={<ListBook/>}/>
+    <Route path='/deletebook' element={<DeleteBook/>}/>
+    <Route path='/addbook' element={<AddBook/>}/>
    </Routes>
- 
    </div>
-     
    </>
   )
 }
